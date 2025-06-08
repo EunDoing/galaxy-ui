@@ -4,6 +4,9 @@ from streamlit_drawable_canvas import st_canvas
 from PIL import Image
 import numpy as np
 
+with open("custom_streamlit_theme.css" as f:
+    st.markdown(f.read(), unsafe_allow_html=True)
+
 st.set_page_config(page_title="내가 그린 은하는 어떤 은하일까?", layout="centered")
 
 def set_background():
@@ -71,5 +74,3 @@ if st.button("🛰️ 분석 시작"):
         st.warning("그림을 먼저 그려주세요 ✏️")
 
 
-with open("custom_streamlit_theme.css" as f:
-    st.markdown(f.read(), unsafe_allow_html=True)
