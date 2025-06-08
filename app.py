@@ -69,3 +69,7 @@ if st.button("🛰️ 분석 시작"):
         st.markdown("</div>", unsafe_allow_html=True)
     else:
         st.warning("그림을 먼저 그려주세요 ✏️")
+
+
+with open("custom_streamlit_theme.css" as f:
+    st.markdown(f.read(), unsafe_allow_html=True)
